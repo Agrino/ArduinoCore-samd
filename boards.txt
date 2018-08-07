@@ -14,6 +14,41 @@
 # License along with this library; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
+######################################################
+#Agrino (WITH) BOOTLOADER
+agrino.name=Agrino
+agrino.vid.0=0x2a03
+agrino.pid.0=0x004d
+agrino.vid.1=0x2a03
+agrino.pid.1=0x804d
+agrino.vid.2=0x2a03
+agrino.pid.2=0x004e
+agrino.vid.3=0x2a03
+agrino.pid.3=0x804e
+agrino.upload.tool=bossac
+agrino.upload.maximum_size=262144
+agrino.upload.use_1200bps_touch=true
+agrino.upload.wait_for_upload_port=true
+agrino.upload.native_usb=true
+agrino.upload.speed=57600
+agrino.build.mcu=cortex-m0plus
+agrino.build.f_cpu=48000000L
+agrino.build.usb_product="Arduino M0"
+agrino.build.board=AGRINO_EVB
+agrino.build.core=arduino
+agrino.build.extra_flags=-D__SAMD21G18A__ -mthumb {build.usb_flags}
+agrino.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+agrino.build.variant=agrino_evb
+agrino.build.variant_system_lib=
+agrino.build.vid=0x2a03
+agrino.build.pid=0x804e
+agrino.build.preferred_out_format=hex
+agrino.bootloader.size=0x4000
+agrino.build.emu.mcu=atmega2560
+agrino.bootloader.tool=avrdude
+agrino.bootloader.low_fuses=0xff
+
+
 # Arduino/Genuino Zero (Prorgamming Port)
 # ---------------------------------------
 arduino_zero_edbg.name=Arduino/Genuino Zero (Programming Port)
